@@ -1,0 +1,1678 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/"
+     xml:base="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ">
+        <rdfs:comment>The ontology of flight service satisfaction surveys aims to represent the knowledge in a structured way of passengers&apos; opinions, assessments and ratings of the services offered by airlines, such as: seat comfort, quality of food and beverage service, customer service, etc.</rdfs:comment>
+        <rdfs:label>Ontology of satisfaction surveys about flight services</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <foaf:maker>Marc Fernández Pereira</foaf:maker>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/maker -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/maker"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City"/>
+        <rdfs:comment>Indicates the city where the passenger flights to</rdfs:comment>
+        <rdfs:label>flights_to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner"/>
+        <rdfs:comment>Indicates which airliner the airline uses.</rdfs:comment>
+        <rdfs:label>flights_with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City"/>
+        <rdfs:comment>Indicates the origin city where the passenger departs.</rdfs:comment>
+        <rdfs:label>flights_from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+        <rdfs:comment>indicates the different ratings the airline obtains from reviews.</rdfs:comment>
+        <rdfs:label>give_feedback_to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:comment>Indicates who (passenger) takes the flight</rdfs:comment>
+        <rdfs:label>has_been_taken_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:comment>indicates the overall rating offered by the passenger.</rdfs:comment>
+        <rdfs:label>has_evaluate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>indicates the score of the services evaluated in the review</rdfs:comment>
+        <rdfs:label>has_opinion_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:comment>Indicates the review performed by a passenger</rdfs:comment>
+        <rdfs:label>has_replied_a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+        <rdfs:comment>Indicates the type of seat taken by the passenger.</rdfs:comment>
+        <rdfs:label>has_select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country"/>
+        <rdfs:comment>Indicates which country a passenger is from</rdfs:comment>
+        <rdfs:label>is_from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+        <rdfs:comment>indicates which company operates the flight</rdfs:comment>
+        <rdfs:label>operated_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <rdfs:comment>indicates which flight the airline operates</rdfs:comment>
+        <rdfs:label>operates_a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:comment>indicates who takes the seat</rdfs:comment>
+        <rdfs:label>selected_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <rdfs:comment>indicate the flight taken by passenger</rdfs:comment>
+        <rdfs:label>takes_a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType"/>
+        <rdfs:comment>Indicates the type of passenger he/she is</rdfs:comment>
+        <rdfs:label>type_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Represents where the flight took place. A property of dbpedia is used to represent this concept.</rdfs:comment>
+        <rdfs:label>dateFlown</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/property/date</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:comment>Represents a review date publish. A property of dbpedia is used to represent this concept.</rdfs:comment>
+        <rdfs:label>datePublished</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/property/date</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Data property for names</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Represents a personal opinion</rdfs:comment>
+        <rdfs:label>opinion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>This data property represent a float value for service ratings. It is associated with the ownership of the dbpedia rating. 
+It has a range restriction between 0 and 5.</rdfs:comment>
+        <rdfs:label>ratingServiceValue</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/property/rating</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>This data property represent an integer value for ratings. It is associated with the ownership of the dbpedia rating.
+It has a range restriction between 0 and 10.</rdfs:comment>
+        <rdfs:label>ratingValue</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/property/rating</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>This property indicates whether the passenger recommends flying with the airline or not.</rdfs:comment>
+        <rdfs:label>recommended</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Represents a title</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>This property refers to whether or not the trip has been verified by the airline.</rdfs:comment>
+        <rdfs:label>verified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline">
+        <rdfs:comment>This class represents an airline. A dbpedia airline ontology is used for this class.</rdfs:comment>
+        <rdfs:label>Airline</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/Airline</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner">
+        <rdfs:comment>This class represents a vehicle that serves as a means of transport for passengers. The dbpedia Airliner page information is used to obtain an up-to-date list of aircraft models.</rdfs:comment>
+        <rdfs:label>Airliner</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Airliner</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType"/>
+        <rdfs:comment>Bussines passenger type</rdfs:comment>
+        <rdfs:label>Business</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+        <rdfs:comment>Bussiness class seat</rdfs:comment>
+        <rdfs:label>BussinessClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:label>CabinStaff</rdfs:label>
+        <rdfs:sameAs>This class represents the cabin staff service.</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City">
+        <rdfs:comment>This class represents a city of origin from where the passenger departs or arrives. . Dbpedia is used to relate this attribute.</rdfs:comment>
+        <rdfs:label>City</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/city</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country">
+        <rdfs:comment>This class represents a country. This class is linked to the corresponding dbpedia ontology.</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/country</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType"/>
+        <rdfs:comment>This class represents travellers travelling in couple</rdfs:comment>
+        <rdfs:label>CoupleLeisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:comment>This class represents a generally poor rating. It corresponds to the numerical range from 0 to 4.</rdfs:comment>
+        <rdfs:label>Deficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:comment>This class represents an excellent rating. It corresponds to the numerical range from 9 to 10.</rdfs:comment>
+        <rdfs:label>Excellent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType"/>
+        <rdfs:comment>This class represents a travellers travelling as family</rdfs:comment>
+        <rdfs:label>FamilyLeisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+        <rdfs:comment>First class seat</rdfs:comment>
+        <rdfs:label>FirstClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>This class represents the concept of flight. Ex: A passenger takes a flight and the flight is operated by a company by means of an aircraft.</rdfs:comment>
+        <rdfs:label>Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the food &amp; beverages service.</rdfs:comment>
+        <rdfs:label>FoodBeverages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:comment>This class represents a good rating. It corresponds to the numerical range from 7 to 8.</rdfs:comment>
+        <rdfs:label>Good</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the ground services.</rdfs:comment>
+        <rdfs:label>GroundService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the inflight entertainment service.</rdfs:comment>
+        <rdfs:label>InflightEntertainment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location">
+        <rdfs:comment>This class contains the information of the origin and destination cities of the flight.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating">
+        <rdfs:comment>This class represents the passenger&apos;s overall rating of the airline&apos;s services.</rdfs:comment>
+        <rdfs:label>OverallRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger">
+        <rdfs:comment>This class represents a passenger</rdfs:comment>
+        <rdfs:label>Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType">
+        <rdfs:comment>This abstract class represents the different types of passengers.</rdfs:comment>
+        <rdfs:label>PassengerType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat"/>
+        <rdfs:comment>Premium Class seat</rdfs:comment>
+        <rdfs:label>PremiumClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review">
+        <rdfs:comment>This class contains passenger ratings.</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/ontology/review</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Abstract class representing an aircraft seat</rdfs:comment>
+        <rdfs:label>Seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the seats comfort service.</rdfs:comment>
+        <rdfs:label>SeatComfort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating">
+        <rdfs:comment>This class broadly represents passengers&apos; ratings of various services.</rdfs:comment>
+        <rdfs:label>ServiceRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <rdfs:comment>This class represents a sufficient rating. It corresponds to the numerical range from 5 to 6.</rdfs:comment>
+        <rdfs:label>Suficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification">
+        <rdfs:comment>This class is used to indicate whether the flight performed by the passenger is verified or not.</rdfs:comment>
+        <rdfs:label>TripVerification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the value for money service.</rdfs:comment>
+        <rdfs:label>ValueForMoney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"/>
+        <rdfs:comment>This class represents the wifi &amp; connectivity service.</rdfs:comment>
+        <rdfs:label>WifiConnectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <has_replied_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4"/>
+        <is_from rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France"/>
+        <takes_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2"/>
+        <type_of rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure"/>
+        <name>Anna</name>
+        <rdfs:comment>Passenger instance</rdfs:comment>
+        <rdfs:label>Anna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <has_replied_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2"/>
+        <has_selected rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat"/>
+        <is_from rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain"/>
+        <takes_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1"/>
+        <name>Antonia</name>
+        <rdfs:comment>Passenger instance 2</rdfs:comment>
+        <rdfs:label>Antonia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass"/>
+        <selected_by rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna"/>
+        <selected_by rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass"/>
+        <rdfs:comment>First class instance</rdfs:comment>
+        <rdfs:label>FirstClassSeat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <dateFlown rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-12T08:30:00</dateFlown>
+        <rdfs:comment>Instance of flight</rdfs:comment>
+        <rdfs:label>Flight1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight"/>
+        <operated_by rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar"/>
+        <dateFlown rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-12T10:30:00</dateFlown>
+        <rdfs:comment>Instance of flight</rdfs:comment>
+        <rdfs:label>Flight2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France">
+        <name>France</name>
+        <rdfs:comment>Instance of country</rdfs:comment>
+        <rdfs:label>France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <has_replied_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1"/>
+        <is_from rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France"/>
+        <takes_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1"/>
+        <name>Juan</name>
+        <rdfs:comment>Passenger instance 3</rdfs:comment>
+        <rdfs:label>Juan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ratingValue>
+        <rdfs:comment>Instance of OverallRating</rdfs:comment>
+        <rdfs:label>OverallRating1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ratingValue>
+        <rdfs:comment>Instance of OverallRating</rdfs:comment>
+        <rdfs:label>OverallRating2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ratingValue>
+        <rdfs:comment>Instance of OverallRating</rdfs:comment>
+        <rdfs:label>OverallRating3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ratingValue>
+        <rdfs:comment>Instance of OverallRating</rdfs:comment>
+        <rdfs:label>OverallRating4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ratingValue>
+        <rdfs:comment>In this instance the reasoner cannot infer the final score because there is no has_evaluate relationship from a review to an OverallRating.</rdfs:comment>
+        <rdfs:label>OverallRating5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+        <has_replied_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3"/>
+        <has_selected rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat"/>
+        <is_from rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain"/>
+        <takes_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1"/>
+        <name>Pepe</name>
+        <rdfs:comment>Passenger instance 4</rdfs:comment>
+        <rdfs:label>Pepe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar">
+        <rdfs:comment>Instance of airline</rdfs:comment>
+        <rdfs:label>Qatar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"/>
+        <operates_a rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1"/>
+        <name>Ryaner</name>
+        <rdfs:comment>Instance of airline</rdfs:comment>
+        <rdfs:label>Ryaner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country"/>
+        <name>Spain</name>
+        <rdfs:comment>Country instance</rdfs:comment>
+        <rdfs:label>Spain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <has_evaluate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1"/>
+        <datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-15T12:00:00</datePublished>
+        <opinion>My first review</opinion>
+        <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</recommended>
+        <title>First review</title>
+        <rdfs:comment>Instance of Review</rdfs:comment>
+        <rdfs:label>Review1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+        <has_evaluate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2"/>
+        <datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-04-15T12:00:00</datePublished>
+        <opinion>My second review of fligth O-23323</opinion>
+        <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
+        <title>My second review</title>
+        <rdfs:comment>Instance of Review</rdfs:comment>
+        <rdfs:label>Review2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3">
+        <has_evaluate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3"/>
+        <datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-15T12:00:00</datePublished>
+        <opinion>My third review</opinion>
+        <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
+        <title>My third review</title>
+        <rdfs:comment>Instance of Review</rdfs:comment>
+        <rdfs:label>Review3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4">
+        <has_evaluate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4"/>
+        <datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-15T12:00:00</datePublished>
+        <opinion>My fourth review</opinion>
+        <recommended rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</recommended>
+        <title>Mi fourth review</title>
+        <rdfs:comment>Instance of Review</rdfs:comment>
+        <rdfs:label>Review4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass">
+        <rdfs:comment>Economy class instance</rdfs:comment>
+        <rdfs:comment>Economy class seat</rdfs:comment>
+        <rdfs:label>EconomyClass</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure">
+        <rdfs:comment>Instance of SoloLeisure</rdfs:comment>
+        <rdfs:comment>This class represents travellers travelling alone</rdfs:comment>
+        <rdfs:label>SoloLeisure</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>EXCELLENT</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#v"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>DEFICIENT</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#v"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>SUFICIENT</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#v"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>GOOD</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#v"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="urn:swrl:var#v"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
