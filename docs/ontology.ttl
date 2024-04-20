@@ -1,0 +1,1083 @@
+@prefix : <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ#> .
+
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> rdf:type owl:Ontology ;
+                                                         rdfs:comment "The ontology of flight service satisfaction surveys aims to represent the knowledge in a structured way of passengers' opinions, assessments and ratings of the services offered by airlines, such as: seat comfort, quality of food and beverage service, customer service, etc." ;
+                                                         rdfs:label "Ontology of satisfaction surveys about flight services" ;
+                                                         owl:versionInfo 1.0 ;
+                                                         <http://xmlns.com/foaf/0.1/maker> "Marc Fernández Pereira" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                   rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> ;
+                                                                   rdfs:comment "Indicates the city where the passenger flights to" ;
+                                                                   rdfs:label "flights_to" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> ;
+                                                                     rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> ;
+                                                                     rdfs:comment "Indicates which airliner the airline uses." ;
+                                                                     rdfs:label "flights_with" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                     rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> ;
+                                                                     rdfs:comment "Indicates the origin city where the passenger departs." ;
+                                                                     rdfs:label "flights_from" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                         rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> ;
+                                                                         rdfs:comment "indicates the different ratings the airline obtains from reviews." ;
+                                                                         rdfs:label "give_feedback_to" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> ;
+                                                                          rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                          rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                          rdfs:comment "Indicates who (passenger) takes the flight" ;
+                                                                          rdfs:label "has_been_taken_by" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                     rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                     rdfs:comment "indicates the overall rating offered by the passenger." ;
+                                                                     rdfs:label "has_evaluate" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                       rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                       rdfs:comment "indicates the score of the services evaluated in the review" ;
+                                                                       rdfs:label "has_opinion_of" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                      rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                      rdfs:comment "Indicates the review performed by a passenger" ;
+                                                                      rdfs:label "has_replied_a" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> ;
+                                                                     rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                     rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> ;
+                                                                     rdfs:comment "Indicates the type of seat taken by the passenger." ;
+                                                                     rdfs:label "has_select" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> rdf:type owl:ObjectProperty ,
+                                                                         owl:FunctionalProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> ;
+                                                                rdfs:comment "Indicates which country a passenger is from" ;
+                                                                rdfs:label "is_from" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> rdf:type owl:ObjectProperty ;
+                                                                    owl:inverseOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> ;
+                                                                    rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                    rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> ;
+                                                                    rdfs:comment "indicates which company operates the flight" ;
+                                                                    rdfs:label "operated_by" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> ;
+                                                                   rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                   rdfs:comment "indicates which flight the airline operates" ;
+                                                                   rdfs:label "operates_a" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> ;
+                                                                    rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                    rdfs:comment "indicates who takes the seat" ;
+                                                                    rdfs:label "selected_by" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                rdfs:comment "indicate the flight taken by passenger" ;
+                                                                rdfs:label "takes_a" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                rdfs:range <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> ;
+                                                                rdfs:comment "Indicates the type of passenger he/she is" ;
+                                                                rdfs:label "type_of" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                  rdfs:range xsd:dateTime ;
+                                                                  rdfs:comment "Represents where the flight took place. A property of dbpedia is used to represent this concept." ;
+                                                                  rdfs:label "dateFlown" ;
+                                                                  rdfs:sameAs "https://dbpedia.org/property/date" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                      rdfs:comment "Represents a review date publish. A property of dbpedia is used to represent this concept." ;
+                                                                      rdfs:label "datePublished" ;
+                                                                      rdfs:sameAs "https://dbpedia.org/property/date" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> rdf:type owl:DatatypeProperty ,
+                                                                      owl:FunctionalProperty ;
+                                                             rdfs:domain [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline>
+                                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country>
+                                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger>
+                                                                                       )
+                                                                         ] ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:comment "Data property for names" ;
+                                                             rdfs:label "name" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                rdfs:range xsd:string ;
+                                                                rdfs:comment "Represents a personal opinion" ;
+                                                                rdfs:label "opinion" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> ,
+                                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> ;
+                                                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                              owl:onDatatype xsd:float ;
+                                                                                                              owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                                                                     ]
+                                                                                                                                     [ xsd:maxInclusive "5.0"^^xsd:float
+                                                                                                                                     ]
+                                                                                                                                   )
+                                                                                                            ]
+                                                                                       ] ;
+                                                                           rdfs:comment """This data property represent a float value for service ratings. It is associated with the ownership of the dbpedia rating. 
+It has a range restriction between 0 and 5.""" ;
+                                                                           rdfs:label "ratingServiceValue" ;
+                                                                           rdfs:sameAs "https://dbpedia.org/property/rating" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> ;
+                                                                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                       owl:onDatatype xsd:integer ;
+                                                                                                       owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                                              ]
+                                                                                                                              [ xsd:maxInclusive 10
+                                                                                                                              ]
+                                                                                                                            )
+                                                                                                     ]
+                                                                                ] ;
+                                                                    rdfs:range xsd:integer ;
+                                                                    rdfs:comment """This data property represent an integer value for ratings. It is associated with the ownership of the dbpedia rating.
+It has a range restriction between 0 and 10.""" ;
+                                                                    rdfs:label "ratingValue" ;
+                                                                    rdfs:sameAs "https://dbpedia.org/property/rating" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                    rdfs:range xsd:boolean ;
+                                                                    rdfs:comment "This property indicates whether the passenger recommends flying with the airline or not." ;
+                                                                    rdfs:label "recommended" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> rdf:type owl:DatatypeProperty ,
+                                                                       owl:FunctionalProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:comment "Represents a title" ;
+                                                              rdfs:label "title" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> ;
+                                                                 rdfs:range xsd:boolean ;
+                                                                 rdfs:comment "This property refers to whether or not the trip has been verified by the airline." ;
+                                                                 rdfs:label "verified" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> rdf:type owl:Class ;
+                                                                rdfs:comment "This class represents an airline. A dbpedia airline ontology is used for this class." ;
+                                                                rdfs:label "Airline" ;
+                                                                rdfs:sameAs "https://dbpedia.org/ontology/Airline" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> rdf:type owl:Class ;
+                                                                 rdfs:comment "This class represents a vehicle that serves as a means of transport for passengers. The dbpedia Airliner page information is used to obtain an up-to-date list of aircraft models." ;
+                                                                 rdfs:label "Airliner" ;
+                                                                 rdfs:seeAlso "https://dbpedia.org/page/Airliner" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> ;
+                                                                 rdfs:comment "Bussines passenger type" ;
+                                                                 rdfs:label "Business" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> ;
+                                                                       rdfs:comment "Bussiness class seat" ;
+                                                                       rdfs:label "BussinessClass" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                   rdfs:label "CabinStaff" ;
+                                                                   rdfs:sameAs "This class represents the cabin staff service." .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> rdf:type owl:Class ;
+                                                             rdfs:comment "This class represents a city of origin from where the passenger departs or arrives. . Dbpedia is used to relate this attribute." ;
+                                                             rdfs:label "City" ;
+                                                             rdfs:sameAs "https://dbpedia.org/ontology/city" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> rdf:type owl:Class ;
+                                                                rdfs:comment "This class represents a country. This class is linked to the corresponding dbpedia ontology." ;
+                                                                rdfs:label "Country" ;
+                                                                rdfs:sameAs "https://dbpedia.org/ontology/country" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> ;
+                                                                      rdfs:comment "This class represents travellers travelling in couple" ;
+                                                                      rdfs:label "CoupleLeisure" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                  rdfs:comment "This class represents a generally poor rating. It corresponds to the numerical range from 0 to 4." ;
+                                                                  rdfs:label "Deficient" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                  rdfs:comment "This class represents an excellent rating. It corresponds to the numerical range from 9 to 10." ;
+                                                                  rdfs:label "Excellent" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> ;
+                                                                      rdfs:comment "This class represents a travellers travelling as family" ;
+                                                                      rdfs:label "FamilyLeisure" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> ;
+                                                                   rdfs:comment "First class seat" ;
+                                                                   rdfs:label "FirstClass" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> rdf:type owl:Class ;
+                                                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> ;
+                                                                                     owl:someValuesFrom <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger>
+                                                                                   ] ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> ;
+                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                     owl:onClass <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline>
+                                                                                   ] ;
+                                                               rdfs:comment "This class represents the concept of flight. Ex: A passenger takes a flight and the flight is operated by a company by means of an aircraft." ;
+                                                               rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                      rdfs:comment "This class represents the food & beverages service." ;
+                                                                      rdfs:label "FoodBeverages" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                             rdfs:comment "This class represents a good rating. It corresponds to the numerical range from 7 to 8." ;
+                                                             rdfs:label "Good" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                      rdfs:comment "This class represents the ground services." ;
+                                                                      rdfs:label "GroundService" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                              rdfs:comment "This class represents the inflight entertainment service." ;
+                                                                              rdfs:label "InflightEntertainment" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location> rdf:type owl:Class ;
+                                                                 rdfs:comment "This class contains the information of the origin and destination cities of the flight." ;
+                                                                 rdfs:label "Location" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> rdf:type owl:Class ;
+                                                                      rdfs:comment "This class represents the passenger's overall rating of the airline's services." ;
+                                                                      rdfs:label "OverallRating" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> rdf:type owl:Class ;
+                                                                  rdfs:comment "This class represents a passenger" ;
+                                                                  rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> rdf:type owl:Class ;
+                                                                      rdfs:comment "This abstract class represents the different types of passengers." ;
+                                                                      rdfs:label "PassengerType" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> ;
+                                                                     rdfs:comment "Premium Class seat" ;
+                                                                     rdfs:label "PremiumClass" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> rdf:type owl:Class ;
+                                                               rdfs:comment "This class contains passenger ratings." ;
+                                                               rdfs:label "Review" ;
+                                                               rdfs:sameAs "https://dbpedia.org/ontology/review" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> rdf:type owl:Class ;
+                                                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> ;
+                                                                                   owl:someValuesFrom <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger>
+                                                                                 ] ;
+                                                             rdfs:comment "Abstract class representing an aircraft seat" ;
+                                                             rdfs:label "Seat" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                    rdfs:comment "This class represents the seats comfort service." ;
+                                                                    rdfs:label "SeatComfort" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> rdf:type owl:Class ;
+                                                                      rdfs:comment "This class broadly represents passengers' ratings of various services." ;
+                                                                      rdfs:label "ServiceRating" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                  rdfs:comment "This class represents a sufficient rating. It corresponds to the numerical range from 5 to 6." ;
+                                                                  rdfs:label "Suficient" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> rdf:type owl:Class ;
+                                                                         rdfs:comment "This class is used to indicate whether the flight performed by the passenger is verified or not." ;
+                                                                         rdfs:label "TripVerification" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                      rdfs:comment "This class represents the value for money service." ;
+                                                                      rdfs:label "ValueForMoney" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> ;
+                                                                         rdfs:comment "This class represents the wifi & connectivity service." ;
+                                                                         rdfs:label "WifiConnectivity" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Anna" ;
+                                                             rdfs:comment "Passenger instance" ;
+                                                             rdfs:label "Anna" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Antonia" ;
+                                                                rdfs:comment "Passenger instance 2" ;
+                                                                rdfs:label "Antonia" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> ;
+                                                                     <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> ,
+                                                                                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> ;
+                                                                       rdfs:comment "First class instance" ;
+                                                                       rdfs:label "FirstClassSeat" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> "2024-04-12T08:30:00"^^xsd:dateTime ;
+                                                                rdfs:comment "Instance of flight" ;
+                                                                rdfs:label "Flight1" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> "2024-04-12T10:30:00"^^xsd:dateTime ;
+                                                                rdfs:comment "Instance of flight" ;
+                                                                rdfs:label "Flight2" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> rdf:type owl:NamedIndividual ;
+                                                               <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "France" ;
+                                                               rdfs:comment "Instance of country" ;
+                                                               rdfs:label "France" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Juan" ;
+                                                             rdfs:comment "Passenger instance 3" ;
+                                                             rdfs:label "Juan" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> 2 ;
+                                                                       rdfs:comment "Instance of OverallRating" ;
+                                                                       rdfs:label "OverallRating1" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> 6 ;
+                                                                       rdfs:comment "Instance of OverallRating" ;
+                                                                       rdfs:label "OverallRating2" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> 8 ;
+                                                                       rdfs:comment "Instance of OverallRating" ;
+                                                                       rdfs:label "OverallRating3" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> 10 ;
+                                                                       rdfs:comment "Instance of OverallRating" ;
+                                                                       rdfs:label "OverallRating4" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> 9 ;
+                                                                       rdfs:comment "In this instance the reasoner cannot infer the final score because there is no has_evaluate relationship from a review to an OverallRating." ;
+                                                                       rdfs:label "OverallRating5" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> ;
+                                                             <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Pepe" ;
+                                                             rdfs:comment "Passenger instance 4" ;
+                                                             rdfs:label "Pepe" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> rdf:type owl:NamedIndividual ;
+                                                              rdfs:comment "Instance of airline" ;
+                                                              rdfs:label "Qatar" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> ;
+                                                               <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> ;
+                                                               <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Ryaner" ;
+                                                               rdfs:comment "Instance of airline" ;
+                                                               rdfs:label "Ryaner" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> ;
+                                                              <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Spain" ;
+                                                              rdfs:comment "Country instance" ;
+                                                              rdfs:label "Spain" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-04-15T12:00:00"^^xsd:dateTime ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My first review" ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "false"^^xsd:boolean ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "First review" ;
+                                                                rdfs:comment "Instance of Review" ;
+                                                                rdfs:label "Review1" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-04-15T12:00:00"^^xsd:dateTime ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My second review of fligth O-23323" ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^xsd:boolean ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "My second review" ;
+                                                                rdfs:comment "Instance of Review" ;
+                                                                rdfs:label "Review2" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> rdf:type owl:NamedIndividual ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-03-15T12:00:00"^^xsd:dateTime ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My third review" ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^xsd:boolean ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "My third review" ;
+                                                                rdfs:comment "Instance of Review" ;
+                                                                rdfs:label "Review3" .
+
+
+###  http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> rdf:type owl:NamedIndividual ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2023-03-15T12:00:00"^^xsd:dateTime ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My fourth review" ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^xsd:boolean ;
+                                                                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "Mi fourth review" ;
+                                                                rdfs:comment "Instance of Review" ;
+                                                                rdfs:label "Review4" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> rdfs:comment "Economy class instance" ,
+                                                                                  "Economy class seat" ;
+                                                                     rdfs:label "EconomyClass" .
+
+
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> rdfs:comment "Instance of SoloLeisure" ,
+                                                                                 "This class represents travellers travelling alone" ;
+                                                                    rdfs:label "SoloLeisure" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good>
+                <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "EXCELLENT" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 9 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 10 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "DEFICIENT" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 0 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 4 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SUFICIENT" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 5 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 6 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "GOOD" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first 7 ;
+                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                               ]
+                                                                                                                                                                    ]
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                                                 rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                            rdf:first 8 ;
+                                                                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                                                                          ]
+                                                                                                                                                                               ]
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest rdf:nil
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

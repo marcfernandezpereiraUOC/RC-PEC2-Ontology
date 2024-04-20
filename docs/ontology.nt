@@ -1,0 +1,1063 @@
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology of flight service satisfaction surveys aims to represent the knowledge in a structured way of passengers' opinions, assessments and ratings of the services offered by airlines, such as: seat comfort, quality of food and beverage service, customer service, etc." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology of satisfaction surveys about flight services" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> <http://xmlns.com/foaf/0.1/maker> "Marc Fernández Pereira" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the city where the passenger flights to" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to> <http://www.w3.org/2000/01/rdf-schema#label> "flights_to" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which airliner the airline uses." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with> <http://www.w3.org/2000/01/rdf-schema#label> "flights_with" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the origin city where the passenger departs." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from> <http://www.w3.org/2000/01/rdf-schema#label> "flights_from" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the different ratings the airline obtains from reviews." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of> <http://www.w3.org/2000/01/rdf-schema#label> "give_feedback_to" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates who (passenger) takes the flight" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#label> "has_been_taken_by" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the overall rating offered by the passenger." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "has_evaluate" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the score of the services evaluated in the review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of> <http://www.w3.org/2000/01/rdf-schema#label> "has_opinion_of" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the review performed by a passenger" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.w3.org/2000/01/rdf-schema#label> "has_replied_a" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the type of seat taken by the passenger." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.w3.org/2000/01/rdf-schema#label> "has_select" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which country a passenger is from" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.w3.org/2000/01/rdf-schema#label> "is_from" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates which company operates the flight" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.w3.org/2000/01/rdf-schema#label> "operated_by" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates which flight the airline operates" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.w3.org/2000/01/rdf-schema#label> "operates_a" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates who takes the seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.w3.org/2000/01/rdf-schema#label> "selected_by" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.w3.org/2000/01/rdf-schema#comment> "indicate the flight taken by passenger" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.w3.org/2000/01/rdf-schema#label> "takes_a" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the type of passenger he/she is" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.w3.org/2000/01/rdf-schema#label> "type_of" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents where the flight took place. A property of dbpedia is used to represent this concept." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/2000/01/rdf-schema#label> "dateFlown" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/property/date" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a review date publish. A property of dbpedia is used to represent this concept." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> <http://www.w3.org/2000/01/rdf-schema#label> "datePublished" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/property/date" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/2000/01/rdf-schema#comment> "Data property for names" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a personal opinion" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> <http://www.w3.org/2000/01/rdf-schema#label> "opinion" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property represent a float value for service ratings. It is associated with the ownership of the dbpedia rating. \nIt has a range restriction between 0 and 5." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#label> "ratingServiceValue" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/property/rating" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2001/XMLSchema#maxInclusive> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property represent an integer value for ratings. It is associated with the ownership of the dbpedia rating.\nIt has a range restriction between 0 and 10." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#label> "ratingValue" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/property/rating" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether the passenger recommends flying with the airline or not." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> <http://www.w3.org/2000/01/rdf-schema#label> "recommended" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a title" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> <http://www.w3.org/2000/01/rdf-schema#comment> "This property refers to whether or not the trip has been verified by the airline." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/verified> <http://www.w3.org/2000/01/rdf-schema#label> "verified" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an airline. A dbpedia airline ontology is used for this class." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> <http://www.w3.org/2000/01/rdf-schema#label> "Airline" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Airline" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a vehicle that serves as a means of transport for passengers. The dbpedia Airliner page information is used to obtain an up-to-date list of aircraft models." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> <http://www.w3.org/2000/01/rdf-schema#label> "Airliner" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airliner> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://dbpedia.org/page/Airliner" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> <http://www.w3.org/2000/01/rdf-schema#comment> "Bussines passenger type" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Bussiness class seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> <http://www.w3.org/2000/01/rdf-schema#label> "BussinessClass" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> <http://www.w3.org/2000/01/rdf-schema#label> "CabinStaff" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> <http://www.w3.org/2000/01/rdf-schema#sameAs> "This class represents the cabin staff service." .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a city of origin from where the passenger departs or arrives. . Dbpedia is used to relate this attribute." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/city" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a country. This class is linked to the corresponding dbpedia ontology." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/country" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents travellers travelling in couple" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "CoupleLeisure" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a generally poor rating. It corresponds to the numerical range from 0 to 4." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> <http://www.w3.org/2000/01/rdf-schema#label> "Deficient" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents an excellent rating. It corresponds to the numerical range from 9 to 10." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> <http://www.w3.org/2000/01/rdf-schema#label> "Excellent" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a travellers travelling as family" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "FamilyLeisure" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> <http://www.w3.org/2000/01/rdf-schema#comment> "First class seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClass" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+_:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the concept of flight. Ex: A passenger takes a flight and the flight is operated by a company by means of an aircraft." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the food & beverages service." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> <http://www.w3.org/2000/01/rdf-schema#label> "FoodBeverages" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a good rating. It corresponds to the numerical range from 7 to 8." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> <http://www.w3.org/2000/01/rdf-schema#label> "Good" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the ground services." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> <http://www.w3.org/2000/01/rdf-schema#label> "GroundService" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the inflight entertainment service." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> <http://www.w3.org/2000/01/rdf-schema#label> "InflightEntertainment" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "This class contains the information of the origin and destination cities of the flight." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the passenger's overall rating of the airline's services." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a passenger" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> <http://www.w3.org/2000/01/rdf-schema#comment> "This abstract class represents the different types of passengers." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> <http://www.w3.org/2000/01/rdf-schema#label> "PassengerType" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Premium Class seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> <http://www.w3.org/2000/01/rdf-schema#label> "PremiumClass" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> <http://www.w3.org/2000/01/rdf-schema#comment> "This class contains passenger ratings." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/review" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class representing an aircraft seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat> <http://www.w3.org/2000/01/rdf-schema#label> "Seat" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the seats comfort service." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> <http://www.w3.org/2000/01/rdf-schema#label> "SeatComfort" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> <http://www.w3.org/2000/01/rdf-schema#comment> "This class broadly represents passengers' ratings of various services." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceRating" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PassengerType> .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a sufficient rating. It corresponds to the numerical range from 5 to 6." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> <http://www.w3.org/2000/01/rdf-schema#label> "Suficient" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to indicate whether the flight performed by the passenger is verified or not." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification> <http://www.w3.org/2000/01/rdf-schema#label> "TripVerification" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the value for money service." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> <http://www.w3.org/2000/01/rdf-schema#label> "ValueForMoney" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the wifi & connectivity service." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> <http://www.w3.org/2000/01/rdf-schema#label> "WifiConnectivity" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Anna" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger instance" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> <http://www.w3.org/2000/01/rdf-schema#label> "Anna" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Antonia" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger instance 2" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Antonia> <http://www.w3.org/2000/01/rdf-schema#label> "Antonia" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Anna> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> <http://www.w3.org/2000/01/rdf-schema#comment> "First class instance" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClassSeat" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> "2024-04-12T08:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of flight" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> <http://www.w3.org/2000/01/rdf-schema#label> "Flight1" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown> "2024-04-12T10:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of flight" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight2> <http://www.w3.org/2000/01/rdf-schema#label> "Flight2" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "France" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of country" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> <http://www.w3.org/2000/01/rdf-schema#label> "France" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/France> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Juan" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger instance 3" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Juan> <http://www.w3.org/2000/01/rdf-schema#label> "Juan" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of OverallRating" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating1" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of OverallRating" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating2" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of OverallRating" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating3" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of OverallRating" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating4" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> <http://www.w3.org/2000/01/rdf-schema#comment> "In this instance the reasoner cannot infer the final score because there is no has_evaluate relationship from a review to an OverallRating." .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating5> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating5" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClassSeat> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/takes_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Pepe" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger instance 4" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Pepe> <http://www.w3.org/2000/01/rdf-schema#label> "Pepe" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of airline" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Qatar> <http://www.w3.org/2000/01/rdf-schema#label> "Qatar" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Ryaner" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of airline" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Ryaner> <http://www.w3.org/2000/01/rdf-schema#label> "Ryaner" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/name> "Spain" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> <http://www.w3.org/2000/01/rdf-schema#comment> "Country instance" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Spain" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating1> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-04-15T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My first review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "First review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review1> <http://www.w3.org/2000/01/rdf-schema#label> "Review1" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating2> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-04-15T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My second review of fligth O-23323" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "My second review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review2> <http://www.w3.org/2000/01/rdf-schema#label> "Review2" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating3> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2024-03-15T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My third review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "My third review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review3> <http://www.w3.org/2000/01/rdf-schema#label> "Review3" .
+# 
+# http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating4> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/datePublished> "2023-03-15T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion> "My fourth review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/recommended> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/title> "Mi fourth review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Review" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/review4> <http://www.w3.org/2000/01/rdf-schema#label> "Review4" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Economy class instance" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Economy class seat" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> <http://www.w3.org/2000/01/rdf-schema#label> "EconomyClass" .
+# 
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of SoloLeisure" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents travellers travelling alone" .
+<http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "SoloLeisure" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid20 <http://www.w3.org/2002/07/owl#members> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FamilyLeisure> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CoupleLeisure> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Business> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid25 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FirstClass> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/EconomyClass> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid38 <http://www.w3.org/2002/07/owl#members> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#v> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid112 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid112 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid112 <http://www.w3.org/2000/01/rdf-schema#label> "EXCELLENT" .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid112 <http://www.w3.org/2003/11/swrl#body> _:genid131 .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid129 .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid127 .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid125 .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid123 .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid117 .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid114 .
+_:genid114 <http://www.w3.org/2003/11/swrl#arguments> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#lessThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid118 .
+_:genid118 <http://www.w3.org/2003/11/swrl#arguments> _:genid120 .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid119 .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid118 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid122 .
+_:genid122 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid122 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid122 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid124 .
+_:genid124 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid124 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid126 .
+_:genid126 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid126 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid126 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid128 .
+_:genid128 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid128 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+_:genid128 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid130 .
+_:genid130 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r> .
+_:genid130 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid130 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> .
+_:genid130 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid129 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid132 .
+_:genid132 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid132 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid132 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid131 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid112 <http://www.w3.org/2003/11/swrl#head> _:genid133 .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid134 .
+_:genid134 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid134 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent> .
+_:genid134 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid133 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid43 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid43 <http://www.w3.org/2000/01/rdf-schema#label> "DEFICIENT" .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid43 <http://www.w3.org/2003/11/swrl#body> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
+_:genid45 <http://www.w3.org/2003/11/swrl#arguments> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/2003/11/swrl#arguments> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
+_:genid53 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid53 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid53 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid55 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid57 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid57 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid59 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r> .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid61 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid63 .
+_:genid63 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid63 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://www.w3.org/2003/11/swrl#head> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid65 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid66 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid66 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid66 <http://www.w3.org/2000/01/rdf-schema#label> "SUFICIENT" .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid66 <http://www.w3.org/2003/11/swrl#body> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid68 .
+_:genid68 <http://www.w3.org/2003/11/swrl#arguments> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid72 .
+_:genid72 <http://www.w3.org/2003/11/swrl#arguments> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid76 .
+_:genid76 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid76 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid76 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid78 .
+_:genid78 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid78 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
+_:genid80 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid80 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid80 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid82 .
+_:genid82 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid82 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid84 .
+_:genid84 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r> .
+_:genid84 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid84 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid86 .
+_:genid86 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid86 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid66 <http://www.w3.org/2003/11/swrl#head> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid88 .
+_:genid88 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid88 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid89 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid89 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid89 <http://www.w3.org/2000/01/rdf-schema#label> "GOOD" .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid89 <http://www.w3.org/2003/11/swrl#body> _:genid108 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid106 .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid102 .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid100 .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid91 .
+_:genid91 <http://www.w3.org/2003/11/swrl#arguments> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid95 .
+_:genid95 <http://www.w3.org/2003/11/swrl#arguments> _:genid97 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid96 .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid95 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid99 .
+_:genid99 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid99 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid99 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid101 .
+_:genid101 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid101 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating> .
+_:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid103 .
+_:genid103 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#o> .
+_:genid103 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid103 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid105 .
+_:genid105 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> .
+_:genid105 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid107 .
+_:genid107 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r> .
+_:genid107 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid107 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid109 .
+_:genid109 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid109 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid89 <http://www.w3.org/2003/11/swrl#head> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid111 .
+_:genid111 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid111 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
