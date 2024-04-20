@@ -11,6 +11,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/1.0"/>
         <rdfs:comment>The ontology of flight service satisfaction surveys aims to represent the knowledge in a structured way of passengers&apos; opinions, assessments and ratings of the services offered by airlines, such as: seat comfort, quality of food and beverage service, customer service, etc.</rdfs:comment>
         <rdfs:label>Ontology of satisfaction surveys about flight services</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
