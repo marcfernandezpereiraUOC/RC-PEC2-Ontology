@@ -7,6 +7,7 @@
 @base <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ#> .
 
 <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ> rdf:type owl:Ontology ;
+                                                         owl:versionIRI <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/1.0.0> ;
                                                          rdfs:comment "The ontology of flight service satisfaction surveys aims to represent the knowledge in a structured way of passengers' opinions, assessments and ratings of the services offered by airlines, such as: seat comfort, quality of food and beverage service, customer service, etc." ;
                                                          rdfs:label "Ontology of satisfaction surveys about flight services" ;
                                                          owl:versionInfo 1.0 ;

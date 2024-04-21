@@ -731,6 +731,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Ontology of satisfaction surveys about flight services"
   } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/1.0.0"
+  } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "1.0"

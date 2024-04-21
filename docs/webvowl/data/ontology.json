@@ -201,7 +201,7 @@
   }, {
     "instances" : 0,
     "union" : [ "7", "21", "54" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "9"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -682,7 +682,7 @@
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "59"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/dateFlown",
@@ -697,7 +697,7 @@
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "range" : "7",
     "domain" : "22",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "63"
   }, {
     "range" : "45",
