@@ -75,7 +75,7 @@
     "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
     "id" : "54",
@@ -201,7 +201,7 @@
   }, {
     "instances" : 0,
     "union" : [ "7", "21", "54" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "9"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -227,7 +227,7 @@
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "instances" : 0,
-    "id" : "60"
+    "id" : "61"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
@@ -427,7 +427,7 @@
     "id" : "59",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "61",
+    "id" : "60",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "63",
@@ -517,7 +517,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by",
@@ -536,12 +536,12 @@
   }, {
     "range" : "13",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "range" : "2",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a",
@@ -553,12 +553,12 @@
   }, {
     "range" : "2",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   }, {
     "range" : "1",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "19"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operates_a",
@@ -570,32 +570,32 @@
   }, {
     "range" : "1",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
     "range" : "13",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "range" : "2",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "1",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "12",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
     "range" : "13",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_selected",
@@ -608,12 +608,12 @@
   }, {
     "range" : "18",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "range" : "13",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_with",
@@ -625,37 +625,37 @@
   }, {
     "range" : "12",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "12",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "18",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "2",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "1",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "50",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "range" : "27",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_opinion_of",
@@ -667,7 +667,7 @@
   }, {
     "range" : "50",
     "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "53"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by",
@@ -690,7 +690,7 @@
     "range" : "56",
     "domain" : "22",
     "attributes" : [ "datatype" ],
-    "id" : "61"
+    "id" : "60"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by",
     "inverse" : "58",
@@ -702,22 +702,22 @@
   }, {
     "range" : "45",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "64"
   }, {
     "range" : "46",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "65"
   }, {
     "range" : "46",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "66"
   }, {
     "range" : "46",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/is_from",
@@ -729,22 +729,22 @@
   }, {
     "range" : "13",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "69"
   }, {
     "range" : "13",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "70"
   }, {
     "range" : "45",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "71"
   }, {
     "range" : "47",
     "domain" : "48",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "72"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/type_of",
@@ -777,66 +777,66 @@
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
-    "range" : "60",
+    "range" : "61",
     "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "80"
   }, {
     "range" : "75",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "81"
   }, {
     "range" : "62",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
     "range" : "75",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
-    "range" : "60",
+    "range" : "61",
     "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "84"
   }, {
     "range" : "75",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
     "range" : "25",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
     "range" : "34",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
     "range" : "50",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
     "range" : "34",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "89"
   }, {
     "range" : "74",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "90"
   }, {
     "range" : "62",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "91"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by",
