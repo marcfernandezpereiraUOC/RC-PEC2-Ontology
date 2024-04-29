@@ -3,10 +3,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
 <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/1.0.0> a prov:Entity;
-	 dc:title "Passenger Satisfaction Questionnaire Ontology";
-	 prov:wasAttributedTo :agent0;
+	 dc:title "Ontology of satisfaction surveys about flight services";
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <http://www.semanticweb.org/marc/ontologies/2024/3/PSQ>;
-	 prov:wasGeneratedAt "21-04-2024";
 .
-:agent0 a prov:Agent; foaf:name "Marc Fernández Pereira".

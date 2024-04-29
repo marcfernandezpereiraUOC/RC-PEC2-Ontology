@@ -11,34 +11,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
-  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "0.0"
-  } ]
-}, {
   "@id" : "_:genid101",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#o"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
-  } ]
-}, {
-  "@id" : "_:genid103",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#r"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#o"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"
-  } ]
-}, {
-  "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -47,7 +20,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"
   } ]
 }, {
-  "@id" : "_:genid107",
+  "@id" : "_:genid103",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -59,7 +32,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"
   } ]
 }, {
-  "@id" : "_:genid109",
+  "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -68,16 +41,144 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
   } ]
 }, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#o"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid12"
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient"
   } ]
 }, {
-  "@id" : "_:genid111",
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GOOD"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid128"
+    }, {
+      "@id" : "_:genid126"
+    }, {
+      "@id" : "_:genid124"
+    }, {
+      "@id" : "_:genid122"
+    }, {
+      "@id" : "_:genid120"
+    }, {
+      "@id" : "_:genid118"
+    }, {
+      "@id" : "_:genid114"
+    }, {
+      "@id" : "_:genid110"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid130"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid110",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "urn:swrl:var#v"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "8"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid114",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "urn:swrl:var#v"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "7"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid118",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#o"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#v"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
+  } ]
+}, {
+  "@id" : "_:genid120",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#o"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
+  } ]
+}, {
+  "@id" : "_:genid122",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#o"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"
+  } ]
+}, {
+  "@id" : "_:genid124",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"
+  } ]
+}, {
+  "@id" : "_:genid126",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"
+  } ]
+}, {
+  "@id" : "_:genid128",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
+  } ]
+}, {
+  "@id" : "_:genid130",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -86,7 +187,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -100,30 +201,30 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid132"
+      "@id" : "_:genid151"
     }, {
-      "@id" : "_:genid130"
+      "@id" : "_:genid149"
     }, {
-      "@id" : "_:genid128"
+      "@id" : "_:genid147"
     }, {
-      "@id" : "_:genid126"
+      "@id" : "_:genid145"
     }, {
-      "@id" : "_:genid124"
+      "@id" : "_:genid143"
     }, {
-      "@id" : "_:genid122"
+      "@id" : "_:genid141"
     }, {
-      "@id" : "_:genid118"
+      "@id" : "_:genid137"
     }, {
-      "@id" : "_:genid114"
+      "@id" : "_:genid133"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid134"
+      "@id" : "_:genid153"
     } ]
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -137,7 +238,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid118",
+  "@id" : "_:genid137",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -151,20 +252,16 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue"
   } ],
-  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
-    "@list" : [ {
-      "@id" : "_:genid16"
-    }, {
-      "@id" : "_:genid14"
-    } ]
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid15"
   } ]
 }, {
-  "@id" : "_:genid122",
+  "@id" : "_:genid141",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -176,7 +273,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
   } ]
 }, {
-  "@id" : "_:genid124",
+  "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -185,7 +282,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
   } ]
 }, {
-  "@id" : "_:genid126",
+  "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -197,7 +294,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"
   } ]
 }, {
-  "@id" : "_:genid128",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -206,7 +303,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"
   } ]
 }, {
-  "@id" : "_:genid130",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -218,7 +315,20 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid19"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -227,7 +337,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
   } ]
 }, {
-  "@id" : "_:genid134",
+  "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -236,19 +346,103 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Excellent"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid17",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "5.0"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid24"
+    }, {
+      "@id" : "_:genid22"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "5.0"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.0"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid26"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid30"
+    }, {
+      "@id" : "_:genid28"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
   "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "10"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid30",
   "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid35"
+    }, {
+      "@id" : "_:genid33"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "http://www.w3.org/2001/XMLSchema#minInclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by"
@@ -257,7 +451,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline"
@@ -270,7 +464,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/selected_by"
@@ -279,7 +473,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -293,7 +487,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -307,7 +501,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -327,7 +521,29 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney"
+    }, {
+      "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -341,7 +557,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -355,30 +571,30 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid63"
+      "@id" : "_:genid82"
     }, {
-      "@id" : "_:genid61"
+      "@id" : "_:genid80"
     }, {
-      "@id" : "_:genid59"
+      "@id" : "_:genid78"
     }, {
-      "@id" : "_:genid57"
+      "@id" : "_:genid76"
     }, {
-      "@id" : "_:genid55"
+      "@id" : "_:genid74"
     }, {
-      "@id" : "_:genid53"
+      "@id" : "_:genid72"
     }, {
-      "@id" : "_:genid49"
+      "@id" : "_:genid68"
     }, {
-      "@id" : "_:genid45"
+      "@id" : "_:genid64"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid65"
+      "@id" : "_:genid84"
     } ]
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -392,7 +608,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -406,16 +622,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingServiceValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid6"
-  } ]
-}, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -427,7 +634,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -436,7 +643,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -448,7 +655,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -457,20 +664,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"
   } ]
 }, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
-    "@list" : [ {
-      "@id" : "_:genid10"
-    }, {
-      "@id" : "_:genid8"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -482,7 +676,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#p"
@@ -491,7 +685,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -500,7 +694,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Deficient"
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -514,30 +708,30 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid86"
+      "@id" : "_:genid105"
     }, {
-      "@id" : "_:genid84"
+      "@id" : "_:genid103"
     }, {
-      "@id" : "_:genid82"
+      "@id" : "_:genid101"
     }, {
-      "@id" : "_:genid80"
+      "@id" : "_:genid99"
     }, {
-      "@id" : "_:genid78"
+      "@id" : "_:genid97"
     }, {
-      "@id" : "_:genid76"
+      "@id" : "_:genid95"
     }, {
-      "@id" : "_:genid72"
+      "@id" : "_:genid91"
     }, {
-      "@id" : "_:genid68"
+      "@id" : "_:genid87"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid88"
+      "@id" : "_:genid107"
     } ]
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -551,7 +745,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -565,7 +759,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -577,7 +771,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#o"
@@ -586,13 +780,7 @@
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "http://www.w3.org/2001/XMLSchema#maxInclusive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "5.0"
-  } ]
-}, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl:var#r"
@@ -602,122 +790,6 @@
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_evaluate"
-  } ]
-}, {
-  "@id" : "_:genid82",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#r"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Review"
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#p"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#r"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_replied_a"
-  } ]
-}, {
-  "@id" : "_:genid86",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#p"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Passenger"
-  } ]
-}, {
-  "@id" : "_:genid88",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#o"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Suficient"
-  } ]
-}, {
-  "@id" : "_:genid89",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GOOD"
-  } ],
-  "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid109"
-    }, {
-      "@id" : "_:genid107"
-    }, {
-      "@id" : "_:genid105"
-    }, {
-      "@id" : "_:genid103"
-    }, {
-      "@id" : "_:genid101"
-    }, {
-      "@id" : "_:genid99"
-    }, {
-      "@id" : "_:genid95"
-    }, {
-      "@id" : "_:genid91"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid111"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid91",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
-  "http://www.w3.org/2003/11/swrl#arguments" : [ {
-    "@list" : [ {
-      "@id" : "urn:swrl:var#v"
-    }, {
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "8"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#builtin" : [ {
-    "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
-  } ]
-}, {
-  "@id" : "_:genid95",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
-  "http://www.w3.org/2003/11/swrl#arguments" : [ {
-    "@list" : [ {
-      "@id" : "urn:swrl:var#v"
-    }, {
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "7"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#builtin" : [ {
-    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
-  } ]
-}, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "urn:swrl:var#o"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "urn:swrl:var#v"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ratingValue"
   } ]
 }, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
@@ -740,6 +812,15 @@
   } ],
   "http://xmlns.com/foaf/0.1/maker" : [ {
     "@value" : "Marc Fernández Pereira"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ#has_verified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/TripVerification"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Airline",
@@ -983,9 +1064,9 @@
     "@value" : "Flight"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid36"
   }, {
-    "@id" : "_:genid18"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Flight1",
@@ -1105,15 +1186,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Juan"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This class contains the information of the origin and destination cities of the flight."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Location"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating",
@@ -1310,7 +1382,7 @@
     "@value" : "Seat"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort",
@@ -1666,26 +1738,15 @@
     "@value" : "This data property represent a float value for service ratings. It is associated with the ownership of the dbpedia rating. \nIt has a range restriction between 0 and 5."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/CabinStaff"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/FoodBeverages"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/GroundService"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/InflightEntertainment"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SeatComfort"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ServiceRating"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/ValueForMoney"
-  }, {
-    "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/WifiConnectivity"
-  }, {
     "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ratingServiceValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid20"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
     "@value" : "https://dbpedia.org/property/rating"
@@ -1699,13 +1760,13 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/OverallRating"
   }, {
-    "@id" : "_:genid11"
+    "@id" : "_:genid25"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ratingValue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "_:genid31"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
     "@value" : "https://dbpedia.org/property/rating"

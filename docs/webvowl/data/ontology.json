@@ -75,7 +75,7 @@
     "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "61",
+    "id" : "60",
     "type" : "owl:Class"
   }, {
     "id" : "54",
@@ -102,13 +102,10 @@
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
-    "type" : "owl:Class"
-  }, {
     "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
     "id" : "50",
@@ -227,7 +224,7 @@
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/City",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "instances" : 0,
-    "id" : "61"
+    "id" : "60"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Country",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
@@ -275,11 +272,6 @@
     "subClasses" : [ "74", "75", "32", "62" ],
     "id" : "33"
   }, {
-    "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Location",
-    "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
-    "instances" : 0,
-    "id" : "76"
-  }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Good",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "instances" : 0,
@@ -289,7 +281,7 @@
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/BussinessClass",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "instances" : 0,
-    "id" : "79",
+    "id" : "78",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/PremiumClass",
@@ -301,7 +293,7 @@
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/Seat",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "instances" : 0,
-    "subClasses" : [ "34", "79", "25", "50" ],
+    "subClasses" : [ "34", "78", "25", "50" ],
     "id" : "6"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/SoloLeisure",
@@ -427,7 +419,7 @@
     "id" : "59",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "60",
+    "id" : "61",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "63",
@@ -466,14 +458,17 @@
     "id" : "58",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "77",
+    "id" : "76",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "78",
+    "id" : "77",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "80",
+    "id" : "79",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "81",
     "type" : "owl:disjointWith"
@@ -482,10 +477,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "83",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "84",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "85",
     "type" : "owl:disjointWith"
@@ -506,7 +501,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "91",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "92",
     "type" : "owl:objectProperty"
@@ -690,7 +685,7 @@
     "range" : "56",
     "domain" : "22",
     "attributes" : [ "datatype" ],
-    "id" : "60"
+    "id" : "61"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/has_been_taken_by",
     "inverse" : "58",
@@ -724,7 +719,7 @@
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "range" : "54",
     "domain" : "7",
-    "attributes" : [ "object", "functional" ],
+    "attributes" : [ "functional", "object" ],
     "id" : "68"
   }, {
     "range" : "13",
@@ -766,78 +761,78 @@
     "range" : "44",
     "domain" : "16",
     "attributes" : [ "object" ],
-    "id" : "77"
+    "id" : "76"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/opinion",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "range" : "55",
     "domain" : "16",
     "attributes" : [ "datatype" ],
-    "id" : "78"
+    "id" : "77"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/fligths_from",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
-    "range" : "61",
+    "range" : "60",
     "domain" : "7",
     "attributes" : [ "object" ],
-    "id" : "80"
+    "id" : "79"
   }, {
     "range" : "75",
     "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "81"
+    "id" : "80"
   }, {
     "range" : "62",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "75",
     "domain" : "74",
     "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
-    "range" : "75",
-    "domain" : "74",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
-  }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/flights_to",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
-    "range" : "61",
+    "range" : "60",
     "domain" : "7",
     "attributes" : [ "object" ],
-    "id" : "84"
+    "id" : "83"
   }, {
     "range" : "75",
     "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "85"
+    "id" : "84"
   }, {
     "range" : "25",
-    "domain" : "79",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "34",
+    "domain" : "78",
     "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
-    "range" : "34",
-    "domain" : "79",
+    "range" : "50",
+    "domain" : "78",
     "attributes" : [ "object", "anonymous" ],
     "id" : "87"
-  }, {
-    "range" : "50",
-    "domain" : "79",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "88"
   }, {
     "range" : "34",
     "domain" : "25",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "89"
+    "id" : "88"
   }, {
     "range" : "74",
     "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "90"
+    "id" : "89"
   }, {
     "range" : "62",
     "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "91"
+    "id" : "90"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/operated_by",
     "inverse" : "20",
@@ -845,12 +840,19 @@
     "range" : "21",
     "domain" : "22",
     "attributes" : [ "object" ],
-    "id" : "92"
+    "id" : "91"
   }, {
     "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ/gets_feedback_of",
     "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
     "range" : "21",
     "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ#has_verified",
+    "baseIri" : "http://www.semanticweb.org/marc/ontologies/2024/3/PSQ",
+    "range" : "94",
+    "domain" : "44",
     "attributes" : [ "object" ],
     "id" : "93"
   } ]
